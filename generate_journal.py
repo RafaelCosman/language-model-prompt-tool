@@ -2,7 +2,7 @@ from helper_functions import ask
 
 from editor import editor
 
-def write_article(topic):
+def generate_article(topic):
     query = f"""
 Please write an article about {topic}.
 
@@ -20,7 +20,7 @@ Article:
 
     return edited_output
 
-def write_journal(topic):
+def generate_journal(topic):
     query = f"""
 Please generate a list of topics for articles to be included in a journal on {topic}.
 
@@ -35,7 +35,7 @@ Topics:
     
     output = ""
     for topic in topics_list:
-        article = write_article(topic)
+        article = generate_article(topic)
         output += article
     
     print(f"\nJournal output for topic {topic}:")
@@ -44,4 +44,4 @@ Topics:
     return output
 
 if __name__ == "__main__":
-    write_journal(input("What would you like me to write a journal about? You can give me a signle topic like 'Geopolitics'. "))
+    generate_journal(input("What would you like me to write a journal about? You can give me a signle topic like 'Geopolitics'. "))
