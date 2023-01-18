@@ -1,15 +1,14 @@
 from helper_functions import ask
 
 def generate_python_code(problem):
-    query = f"""
+    output = ask(f"""
 Please generate python code to {problem}.
 - The code should be as concise as possible
 - It should minimize side effects and never take dangerous actions like deleting files etc.
 
 Python code:
-"""
+""")
 
-    output = ask(query)
     print(f"Python Code for {problem}:")
     print(output)
 

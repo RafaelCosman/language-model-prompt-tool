@@ -1,22 +1,21 @@
 from helper_functions import ask
 
 def generate_textbook_outline(topic):
-    query = f"""
+    output = ask(f"""
 Please list the 6-12 (absolute max of 12) chapters for a textbook on {topic}.
 These chapters are numbered 1., 2., 3., etc.
 
 Outline:
 
-"""
+""")
 
-    output = ask(query)
     print(f"Textbook Outline for topic {topic}:")
     print(output)
 
     return output
 
 def generate_textbook_chapter_outline(topic, textbook_outline, section):
-    query = f"""
+    output = ask(f"""
 We are writing a textbook on {topic}. The chapters are:
 
 {textbook_outline}
@@ -27,16 +26,15 @@ Your job is to write the outline for chapter {section}.
 
 {section} Outline:
 
-"""
+""")
 
-    output = ask(query)
     print(f"\n{section}")
     print(output)
 
     return output
 
 def generate_subsection(topic, textbook_outline, chapter, chapter_outline, subsection):
-    query = f"""
+    output = ask(f"""
 We are designing a course on {topic}. The overall textbook outline is:
 
 {textbook_outline}
@@ -52,9 +50,8 @@ Your job is to write subsection {subsection}.
 
 {subsection} Content:
 
-"""
+""")
 
-    output = ask(query)
     print(f"\n## {subsection}\n")
     print(output)
 

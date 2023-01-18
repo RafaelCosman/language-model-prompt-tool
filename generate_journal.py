@@ -3,14 +3,13 @@ from helper_functions import ask
 from editor import editor
 
 def generate_article(topic):
-    query = f"""
+    output = ask(f"""
 Please write an article about {topic}.
 
 Article:
 
-"""
+""")
 
-    output = ask(query)
     print(f"\nArticle output for topic {topic}:")
     print(output)
     
@@ -21,15 +20,15 @@ Article:
     return edited_output
 
 def generate_journal(topic):
-    query = f"""
+    raw_topics_list = ask(f"""
 Please generate a list of topics for articles to be included in a journal on {topic}.
 
 Topics:
 
 
-"""
+""")
 
-    topics_list = ask(query).split("\n")
+    topics_list = raw_topics_list.split("\n")
     print(f"Topics list for journal on {topic}:")
     print(topics_list)
     
