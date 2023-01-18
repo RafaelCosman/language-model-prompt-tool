@@ -12,3 +12,6 @@ Please edit the following text to be as clear and concise as possible:
     print(output)
 
     return output
+
+if __name__ == "__main__":
+    edit(input("What text would you like me to edit? Please paste it here. I will make it as clear and concise as possible."))

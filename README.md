@@ -14,7 +14,9 @@ _If you have any issues with installing or using this code, please reach out to 
 
 # Example Usage
 
-## Writing Textbooks - textbook_writing.py
+## Generation
+
+### Textbooks - textbook_writing.py
 
 Just run:
 `python textbook_writing.py`
@@ -32,7 +34,7 @@ You should then see on your prompt:
 
 This third step can take 30-60 minutes, please be patient. It's important that your internet connection is not interrupted during this process! Note also that textbook generation requires a LOT of queries to the OpenAI API, so if you have a limited budget this may eat into it very quickly.
 
-## Writing Journals - journal_writing.py
+### Journals - journal_writing.py
 
 Similar to writing textbooks, just run:
 `python journal_writing.py`
@@ -46,3 +48,9 @@ You should then see on your prompt:
 
 1. A list of the journal article topics
 2. Each journal article written out in turn
+
+## Editing and Evaluation
+
+### Editing - edit.py
+
+edit.py will edit text to be clear and concise. It is used by other functions such as journal/article generation. To use it directly, just run `python edit.py`
