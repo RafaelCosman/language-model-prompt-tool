@@ -1,6 +1,6 @@
 from helper_functions import ask
 
-from editor import editor
+from editor import edit
 
 def generate_article(topic):
     output = ask(f"""

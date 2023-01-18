@@ -1,6 +1,6 @@
 from helper_functions import ask
 
-def editor(text):
+def edit(text):
     output = ask(f"""
 Please edit the following text to be as clear and concise as possible:
 
