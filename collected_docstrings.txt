@@ -1,0 +1,211 @@
+================
+generate_python_code.py
+================
+
+function generate_python_code
+Function to generate python code for a given problem.
+
+Parameters
+----------
+problem : str
+The problem for which python code needs to be generated.
+
+Returns
+-------
+str
+The generated python code for the input problem.
+
+
+================
+generate_textbook.py
+================
+
+This module contains functions to generate a textbook.
+
+function generate_subsection
+Function to generate a subsection for a chapter of the textbook.
+
+Parameters
+----------
+topic : str
+The topic of the textbook.
+textbook_outline : str
+The outline of the entire textbook.
+chapter : str
+The chapter of the textbook to generate the subsection for.
+chapter_outline : str
+The outline of the chapter.
+subsection : str
+The subsection to be generated.
+
+Returns
+-------
+str
+The content of the subsection.
+
+
+function generate_textbook
+Function to generate a textbook.
+
+Parameters
+----------
+topic : str
+The topic of the textbook.
+
+Returns
+-------
+None
+
+
+function generate_textbook_chapter_outline
+Function to generate the outline for a chapter of the textbook.
+
+Parameters
+----------
+topic : str
+The topic of the textbook.
+textbook_outline : str
+The outline of the entire textbook.
+section : str
+The section of the textbook to generate the outline for.
+
+Returns
+-------
+str
+The outline of the chapter.
+
+
+function generate_textbook_outline
+Function to generate the outline for the textbook.
+
+Parameters
+----------
+topic : str
+The topic of the textbook.
+
+Returns
+-------
+str
+The outline of the textbook.
+
+
+================
+generate_play.py
+================
+
+This module contains functions to generate a play.
+
+function generate_play
+Function to generate the whole play.
+
+Parameters
+----------
+play_name : str
+The name of the play.
+
+Returns
+-------
+str
+The text of the entire play.
+
+
+function generate_scene
+Function to generate a scene for the play.
+
+Parameters
+----------
+play_name : str
+The name of the play.
+scenes_list : list
+A list of all the scenes in the play.
+scene_name : str
+The name of the scene to be generated.
+
+Returns
+-------
+str
+The text of the scene.
+
+
+================
+solve_math_problem_UNSAFE.py
+================
+
+function solve_math_problem_UNSAFE
+
+================
+document_python.py
+================
+
+function document_python_file
+
+function document_python_file_inplace
+
+================
+edit.py
+================
+
+This module contains functions to edit text.
+
+function edit
+Function to edit the text to be as clear and concise as possible.
+
+Parameters
+----------
+text : str
+The text to be edited.
+
+Returns
+-------
+str
+The edited version of the input text.
+
+
+================
+generate_journal.py
+================
+
+function generate_article
+Function to generate an article about a given topic.
+
+Parameters
+----------
+topic : str
+The topic of the article.
+
+Returns
+-------
+str
+The generated article.
+
+
+function generate_journal
+Function to generate a journal about a given topic.
+
+Parameters
+----------
+topic : str
+The topic of the journal.
+
+Returns
+-------
+str
+The generated journal.
+
+
+================
+collect_documentation.py
+================
+
+    Function to collect the documentation of all the modules and functions in the given modules.
+
+    Returns
+    -------
+    str
+        The collected documentation.
+
+================
+general_solver.py
+================
+
+function general_solver

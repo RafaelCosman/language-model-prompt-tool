@@ -1,5 +1,9 @@
 from helper_functions import ask
 
+with open('collected_docstrings.txt', 'r') as f:
+    # Read the file into a string
+    documentation = f.read()
+
 def generate_python_code(problem):
     """
     Function to generate python code for a given problem.
@@ -14,7 +18,12 @@ def generate_python_code(problem):
     str
         The generated python code for the input problem.
     """
+
     output = ask(f"""
+For reference, here is the documentation for this entire repo. These functions may or may not be helpful for solving the problem below.
+
+{documentation}
+
 Please generate python code to do the following:
 
 {problem}
