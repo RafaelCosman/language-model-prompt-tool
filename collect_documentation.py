@@ -6,6 +6,11 @@ import generate_play
 import solve_math_problem_UNSAFE
 import document_python
 
+def trim_leading_whitespace(string):
+    lines = string.split('\n')
+    trimmed_lines = [line.lstrip() for line in lines]
+    return '\n'.join(trimmed_lines)
+
 def collect_documentation():
     """
     Function to collect the documentation of all the modules and functions in the given modules.
@@ -21,17 +26,21 @@ def collect_documentation():
     for module in [generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python]:
         output += f"""
 ================
-Module {module.__name__}
-Docstring: {module.__doc__}
+{module.__name__}.py
+================
 """
+        if module.__doc__:
+            output += module.__doc__
 
         for item in getmembers(module):
-             if isfunction(item[1]):
+            if isfunction(item[1]):
                 function = item[1]
-                output += f"""
-function: {function.__name__}
-docstring: {function.__doc__}
-"""
+                output += f"\nfunction: {function.__name__}"
+
+                if function.__doc__:
+                    output += f"{trim_leading_whitespace(function.__doc__)}"
+
+                output += "\n"
         
     print(output)
 
