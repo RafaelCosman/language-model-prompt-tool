@@ -1,6 +1,24 @@
+
+"""
+This module contains functions to generate a textbook.
+"""
+
 from helper_functions import ask
 
 def generate_textbook_outline(topic):
+    """
+    Function to generate the outline for the textbook.
+
+    Parameters
+    ----------
+    topic : str
+        The topic of the textbook.
+
+    Returns
+    -------
+    str
+        The outline of the textbook.
+    """
     output = ask(f"""
 Please list the 6-12 (absolute max of 12) chapters for a textbook on {topic}.
 These chapters are numbered 1., 2., 3., etc.
@@ -15,6 +33,23 @@ Outline:
     return output
 
 def generate_textbook_chapter_outline(topic, textbook_outline, section):
+    """
+    Function to generate the outline for a chapter of the textbook.
+
+    Parameters
+    ----------
+    topic : str
+        The topic of the textbook.
+    textbook_outline : str
+        The outline of the entire textbook.
+    section : str
+        The section of the textbook to generate the outline for.
+
+    Returns
+    -------
+    str
+        The outline of the chapter.
+    """
     output = ask(f"""
 We are writing a textbook on {topic}. The chapters are:
 
@@ -34,6 +69,27 @@ Your job is to write the outline for chapter {section}.
     return output
 
 def generate_subsection(topic, textbook_outline, chapter, chapter_outline, subsection):
+    """
+    Function to generate a subsection for a chapter of the textbook.
+
+    Parameters
+    ----------
+    topic : str
+        The topic of the textbook.
+    textbook_outline : str
+        The outline of the entire textbook.
+    chapter : str
+        The chapter of the textbook to generate the subsection for.
+    chapter_outline : str
+        The outline of the chapter.
+    subsection : str
+        The subsection to be generated.
+
+    Returns
+    -------
+    str
+        The content of the subsection.
+    """
     output = ask(f"""
 We are designing a course on {topic}. The overall textbook outline is:
 
@@ -58,6 +114,18 @@ Your job is to write subsection {subsection}.
     return output
 
 def generate_textbook(topic):
+    """
+    Function to generate a textbook.
+
+    Parameters
+    ----------
+    topic : str
+        The topic of the textbook.
+
+    Returns
+    -------
+    None
+    """
     textbook_outline = generate_textbook_outline(topic)
 
     section_and_outlines = [(section, generate_textbook_chapter_outline(topic, textbook_outline, section)) for section in textbook_outline.splitlines()]
