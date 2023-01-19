@@ -20,7 +20,7 @@ def generate_scene(play_name, scenes_list, scene_name):
     Returns
     -------
     str
-        The output of the scene.
+        The text of the scene.
     """
     output = ask(f"""
 We are writing a play called {play_name}
@@ -52,7 +52,7 @@ def generate_play(play_name):
     Returns
     -------
     str
-        The output of the play.
+        The text of the entire play.
     """
     raw_scenes_list = ask(f"""
 Please generate a list of scenes for a play called {play_name}.
