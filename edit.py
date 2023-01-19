@@ -1,3 +1,7 @@
+"""
+This module contains functions to edit text.
+"""
+
 from helper_functions import ask
 
 def edit(text):
