@@ -1,6 +1,19 @@
 from helper_functions import ask
 
 def generate_python_code(problem):
+    """
+    Function to generate python code for a given problem.
+
+    Parameters
+    ----------
+    problem : str
+        The problem for which python code needs to be generated.
+
+    Returns
+    -------
+    str
+        The generated python code for the input problem.
+    """
     output = ask(f"""
 Please generate python code to do the following:
 
