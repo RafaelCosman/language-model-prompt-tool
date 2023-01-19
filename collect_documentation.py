@@ -7,6 +7,15 @@ import solve_math_problem_UNSAFE
 import document_python
 
 def collect_documentation():
+    """
+    Function to collect the documentation of all the modules and functions in the given modules.
+
+    Returns
+    -------
+    str
+        The collected documentation.
+    """
+
     output = ""
 
     for module in [generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python]:
