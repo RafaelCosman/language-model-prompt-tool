@@ -5,6 +5,10 @@ import generate_textbook
 import generate_play
 import solve_math_problem_UNSAFE
 import document_python
+import edit
+import generate_journal
+import collect_documentation
+import general_solver
 
 def trim_leading_whitespace(string):
     lines = string.split('\n')
@@ -23,7 +27,7 @@ def collect_documentation():
 
     output = ""
 
-    for module in [generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python]:
+    for module in [generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python, edit, generate_journal, collect_documentation, general_solver]:
         output += f"""
 ================
 {module.__name__}.py
@@ -33,7 +37,7 @@ def collect_documentation():
             output += module.__doc__
 
         for item in getmembers(module):
-            if isfunction(item[1]):
+            if isfunction(item[1]) and item[1].__module__ is module.__name__:
                 function = item[1]
                 output += f"\nfunction {function.__name__}"
 
