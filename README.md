@@ -54,3 +54,6 @@ You should then see on your prompt:
 ### Editing - edit.py
 
 edit.py will edit text to be clear and concise. It is used by other functions such as journal/article generation. To use it directly, just run `python edit.py`
+
+<img width="857" alt="image" src="https://user-images.githubusercontent.com/1255944/213333190-43c1cfa7-1869-4d0a-9e8a-10e2bdecea77.png">
+
