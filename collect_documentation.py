@@ -35,7 +35,7 @@ def collect_documentation():
         for item in getmembers(module):
             if isfunction(item[1]):
                 function = item[1]
-                output += f"\nfunction: {function.__name__}"
+                output += f"\nfunction {function.__name__}"
 
                 if function.__doc__:
                     output += f"{trim_leading_whitespace(function.__doc__)}"
