@@ -1,4 +1,4 @@
-from helper_functions import gpt
+from gpt import gpt
 
 with open('collected_docstrings.txt', 'r') as f:
     # Read the file into a string

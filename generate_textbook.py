@@ -3,7 +3,7 @@
 This module contains functions to generate a textbook.
 """
 
-from helper_functions import gpt
+from gpt import gpt
 
 def generate_textbook_outline(topic):
     """

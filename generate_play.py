@@ -2,7 +2,7 @@
 This module contains functions to generate a play.
 """
 
-from helper_functions import gpt
+from gpt import gpt
 
 def generate_scene(play_name, scenes_list, scene_name):
     """

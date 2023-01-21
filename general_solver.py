@@ -1,4 +1,4 @@
-from helper_functions import gpt
+from gpt import gpt
 from generate_journal import generate_journal, generate_article
 from generate_python_code import generate_python_code
 from generate_textbook import generate_textbook

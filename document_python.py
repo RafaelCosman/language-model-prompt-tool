@@ -1,4 +1,4 @@
-from helper_functions import gpt
+from gpt import gpt
 
 def document_python_file(python_code):
     output = gpt(f"""

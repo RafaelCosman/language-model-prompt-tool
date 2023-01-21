@@ -1,4 +1,4 @@
-from helper_functions import gpt
+from gpt import gpt
 
 from edit import edit
 

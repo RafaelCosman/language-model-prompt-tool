@@ -2,7 +2,7 @@
 This module contains functions to edit text.
 """
 
-from helper_functions import gpt
+from gpt import gpt
 
 def edit(text):
     """
