@@ -3,6 +3,12 @@ from gpt import gpt
 with open('collected_docstrings.txt', 'r') as f:
     # Read the file into a string
     documentation = f.read()
+with open('gpt.py', 'r') as f:
+    gpt_code = f.read()
+with open('solve_math_problem_UNSAFE.py', 'r') as f:
+    solve_math_problem_UNSAFE_code = f.read()
+with open('generate_python_code.py', 'r') as f:
+    generate_python_code_code = f.read()
 
 def generate_python_code(problem):
     """
@@ -19,12 +25,34 @@ def generate_python_code(problem):
         The generated python code for the input problem.
     """
 
+    # Note that as of this writing, the following prompt uses ~2,000 tokens.
+    # This gives us about 2000 tokens with which to write code, which is perfect.
     output = gpt(f"""
 For reference, here is the documentation for this entire repo. These functions may or may not be helpful for solving the problem below.
 
 {documentation}
 
-Please generate python code to do the following:
+Also for reference, here are the contents of some files in this repo:
+
+================
+gpt.py
+================
+
+{gpt_code}
+
+================
+generate_python_code.py
+================
+
+{generate_python_code_code}
+
+================
+solve_math_problem_UNSAFE.py
+================
+
+{solve_math_problem_UNSAFE_code}
+
+Now please generate python code to do the following:
 
 {problem}
 
