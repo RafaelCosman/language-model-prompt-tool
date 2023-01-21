@@ -59,28 +59,28 @@ if __name__ == "__main__":
 The correct documented version of this code would be:
 
 \"\"\"
-This module contains functions to generate a play.
+This module contains functions to generate a play
 \"\"\"
 
 from helper_functions import ask
 
 def generate_scene(play_name, scenes_list, scene_name):
     \"\"\"
-    Function to generate a scene for the play.
+    Function to generate a scene for the play
 
     Parameters
     ----------
     play_name : str
-        The name of the play.
+        The name of the play
     scenes_list : list
-        A list of all the scenes in the play.
+        A list of all the scenes in the play
     scene_name : str
-        The name of the scene to be generated.
+        The name of the scene to be generated
 
     Returns
     -------
     str
-        The text of the scene.
+        The text of the scene
     \"\"\"
     output = ask(f\"\"\"
 We are writing a play called {{play_name}}
@@ -102,17 +102,17 @@ Scene:
 
 def generate_play(play_name):
     \"\"\"
-    Function to generate an entire play.
+    Function to generate an entire play
 
     Parameters
     ----------
     play_name : str
-        The name of the play.
+        The name of the play
 
     Returns
     -------
     str
-        The text of the entire play.
+        The text of the entire play
     \"\"\"
     raw_scenes_list = ask(f\"\"\"
 Please generate a list of scenes for a play called {{play_name}}.
@@ -170,17 +170,17 @@ from helper_functions import ask
 
 def edit(text):
     \"\"\"
-    Function to edit the text to be as clear and concise as possible.
+    Function to edit the text to be as clear and concise as possible
 
     Parameters
     ----------
     text : str
-        The text to be edited.
+        The text to be edited
 
     Returns
     -------
     str
-        The edited version of the input text.
+        The edited version of the input text
     \"\"\"
     output = ask(f\"\"\"
 Please edit the following text to be as clear and concise as possible:

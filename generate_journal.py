@@ -4,17 +4,17 @@ from edit import edit
 
 def generate_article(topic):
     """
-    Function to generate an article about a given topic.
+    Function to generate an article about a given topic
 
     Parameters
     ----------
     topic : str
-        The topic of the article.
+        The topic of the article
 
     Returns
     -------
     str
-        The generated article.
+        The generated article
     """
     output = gpt(f"""
 Please write an article about {topic}.
@@ -34,17 +34,17 @@ Article:
 
 def generate_journal(topic):
     """
-    Function to generate a journal about a given topic.
+    Function to generate a journal about a given topic
 
     Parameters
     ----------
     topic : str
-        The topic of the journal.
+        The topic of the journal
 
     Returns
     -------
     str
-        The generated journal.
+        The generated journal
     """
     raw_topics_list = gpt(f"""
 Please generate a list of topics for articles to be included in a journal on {topic}.

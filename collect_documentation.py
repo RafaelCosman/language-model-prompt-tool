@@ -18,12 +18,12 @@ def trim_leading_whitespace(string):
 
 def collect_documentation():
     """
-    Function to collect the documentation of all the modules and functions in the given modules.
+    Function to collect the documentation of all the modules and functions in the given modules
 
     Returns
     -------
     str
-        The collected documentation.
+        The collected documentation
     """
 
     output = ""

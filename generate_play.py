@@ -1,26 +1,26 @@
 """
-This module contains functions to generate a play.
+This module contains functions to generate a play
 """
 
 from gpt import gpt
 
 def generate_scene(play_name, scenes_list, scene_name):
     """
-    Function to generate a scene for the play.
+    Function to generate a scene for the play
 
     Parameters
     ----------
     play_name : str
-        The name of the play.
+        The name of the play
     scenes_list : list
-        A list of all the scenes in the play.
+        A list of all the scenes in the play
     scene_name : str
-        The name of the scene to be generated.
+        The name of the scene to be generated
 
     Returns
     -------
     str
-        The text of the scene.
+        The text of the scene
     """
     output = gpt(f"""
 We are writing a play called {play_name}
@@ -42,17 +42,17 @@ Scene:
 
 def generate_play(play_name):
     """
-    Function to generate an entire play.
+    Function to generate an entire play
 
     Parameters
     ----------
     play_name : str
-        The name of the play.
+        The name of the play
 
     Returns
     -------
     str
-        The text of the entire play.
+        The text of the entire play
     """
     raw_scenes_list = gpt(f"""
 Please generate a list of scenes for a play called {play_name}.

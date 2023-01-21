@@ -2,7 +2,7 @@ import collect_documentation
 
 def update_collected_docstrings():
     """
-    Function to update collected_docstrings.txt.
+    Function to update collected_docstrings.txt
     """
     collected_docstrings = collect_documentation.collect_documentation()
 

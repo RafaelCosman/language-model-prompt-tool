@@ -1,23 +1,23 @@
 
 """
-This module contains functions to generate a textbook.
+This module contains functions to generate a textbook
 """
 
 from gpt import gpt
 
 def generate_textbook_outline(topic):
     """
-    Function to generate the outline for the textbook.
+    Function to generate the outline for the textbook
 
     Parameters
     ----------
     topic : str
-        The topic of the textbook.
+        The topic of the textbook
 
     Returns
     -------
     str
-        The outline of the textbook.
+        The outline of the textbook
     """
     output = gpt(f"""
 Please list the 6-12 (absolute max of 12) chapters for a textbook on {topic}.
@@ -34,21 +34,21 @@ Outline:
 
 def generate_textbook_chapter_outline(topic, textbook_outline, section):
     """
-    Function to generate the outline for a chapter of the textbook.
+    Function to generate the outline for a chapter of the textbook
 
     Parameters
     ----------
     topic : str
-        The topic of the textbook.
+        The topic of the textbook
     textbook_outline : str
-        The outline of the entire textbook.
+        The outline of the entire textbook
     section : str
-        The section of the textbook to generate the outline for.
+        The section of the textbook to generate the outline for
 
     Returns
     -------
     str
-        The outline of the chapter.
+        The outline of the chapter
     """
     output = gpt(f"""
 We are writing a textbook on {topic}. The chapters are:
@@ -70,25 +70,25 @@ Your job is to write the outline for chapter {section}.
 
 def generate_subsection(topic, textbook_outline, chapter, chapter_outline, subsection):
     """
-    Function to generate a subsection for a chapter of the textbook.
+    Function to generate a subsection for a chapter of the textbook
 
     Parameters
     ----------
     topic : str
-        The topic of the textbook.
+        The topic of the textbook
     textbook_outline : str
-        The outline of the entire textbook.
+        The outline of the entire textbook
     chapter : str
-        The chapter of the textbook to generate the subsection for.
+        The chapter of the textbook to generate the subsection for
     chapter_outline : str
-        The outline of the chapter.
+        The outline of the chapter
     subsection : str
-        The subsection to be generated.
+        The subsection to be generated
 
     Returns
     -------
     str
-        The content of the subsection.
+        The content of the subsection
     """
     output = gpt(f"""
 We are designing a course on {topic}. The overall textbook outline is:

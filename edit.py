@@ -6,17 +6,17 @@ from gpt import gpt
 
 def edit(text):
     """
-    Function to edit the text to be as clear and concise as possible.
+    Function to edit the text to be as clear and concise as possible
 
     Parameters
     ----------
     text : str
-        The text to be edited.
+        The text to be edited
 
     Returns
     -------
     str
-        The edited version of the input text.
+        The edited version of the input text
     """
     output = gpt(f"""
 Please edit the following text to be as clear and concise as possible:

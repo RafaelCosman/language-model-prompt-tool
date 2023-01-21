@@ -12,17 +12,17 @@ with open('generate_python_code.py', 'r') as f:
 
 def generate_python_code(problem):
     """
-    Function to generate python code for a given problem.
+    Function to generate python code for a given problem
 
     Parameters
     ----------
     problem : str
-        The problem for which python code needs to be generated.
+        The problem for which python code needs to be generated
 
     Returns
     -------
     str
-        The generated python code for the input problem.
+        The generated python code for the input problem
     """
 
     # Note that as of this writing, the following prompt uses ~2,000 tokens.
