@@ -216,3 +216,25 @@ general_solver.py
 ================
 
 function general_solver
+
+================
+write_python_file.py
+================
+
+This module contains functions to write a new python file using GPT
+
+function write_python_file
+Function to write a python file
+
+Parameters
+----------
+filename : str
+The name of the python file
+description : str
+A description of the desired functionality of the python file
+
+Returns
+-------
+str
+The generated code
+

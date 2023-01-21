@@ -10,6 +10,7 @@ import edit
 import generate_journal
 import collect_documentation
 import general_solver
+import write_python_file
 
 def trim_leading_whitespace(string):
     lines = string.split('\n')
@@ -28,7 +29,7 @@ def collect_documentation():
 
     output = ""
 
-    for module in [gpt, generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python, edit, generate_journal, collect_documentation, general_solver]:
+    for module in [gpt, generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python, edit, generate_journal, collect_documentation, general_solver, write_python_file]:
         output += f"""
 ================
 {module.__name__}.py
