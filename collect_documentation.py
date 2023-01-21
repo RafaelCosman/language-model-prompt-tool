@@ -1,5 +1,6 @@
 from inspect import getmembers, isfunction  
 
+import gpt
 import generate_python_code
 import generate_textbook
 import generate_play
@@ -27,7 +28,7 @@ def collect_documentation():
 
     output = ""
 
-    for module in [generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python, edit, generate_journal, collect_documentation, general_solver]:
+    for module in [gpt, generate_python_code, generate_textbook, generate_play, solve_math_problem_UNSAFE, document_python, edit, generate_journal, collect_documentation, general_solver]:
         output += f"""
 ================
 {module.__name__}.py
