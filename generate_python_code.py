@@ -58,6 +58,7 @@ Now please generate python code to do the following:
 
 - The code should be as concise as possible
 - It should minimize side effects and never take dangerous actions like deleting files etc.
+- It should make sure to import anything that it uses
 
 Python code:
 """)
