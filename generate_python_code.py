@@ -59,6 +59,7 @@ Now please generate python code to do the following:
 - The code should be as concise as possible
 - It should minimize side effects and never take dangerous actions like deleting files etc.
 - It should make sure to import anything that it uses
+- If the code will live in this repo and needs to use the gpt() function, it should import it using `from gpt import gpt` and NOT call `lmtk.modes.raw_gpt.RawGPTMode()`
 
 Python code:
 """)
