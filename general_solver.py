@@ -1,4 +1,4 @@
-from helper_functions import ask
+from helper_functions import gpt
 from generate_journal import generate_journal, generate_article
 from generate_python_code import generate_python_code
 from generate_textbook import generate_textbook
@@ -6,7 +6,7 @@ from generate_play import generate_play
 from solve_math_problem_UNSAFE import solve_math_problem_UNSAFE
 
 def general_solver(prompt):
-    suggested_function = ask(f"""
+    suggested_function = gpt(f"""
 We are trying to solve the following prompt:
 
 {prompt}
@@ -26,7 +26,7 @@ Suggested function (please respond with one of the above options):
     print("suggested_function:", suggested_function)
 
     if suggested_function == "A. generate_article":
-        topic = ask(f"""
+        topic = gpt(f"""
 The user has asked:
 
 {prompt}
@@ -40,7 +40,7 @@ Topic:
 """)
         output = generate_article(topic)
     elif suggested_function == "B. generate_journal":
-        topic = ask(f"""
+        topic = gpt(f"""
 The user has asked:
 
 {prompt}
@@ -54,7 +54,7 @@ Topic:
 """)
         output = generate_journal(topic)
     elif suggested_function == "C. generate_python_code":
-        problem = ask(f"""
+        problem = gpt(f"""
 The user has asked:
 
 {prompt}
@@ -68,7 +68,7 @@ Topic:
 """)
         output = generate_python_code(problem)
     elif suggested_function == "D. generate_textbook":
-        topic = ask(f"""
+        topic = gpt(f"""
 The user has asked:
 
 {prompt}
@@ -82,7 +82,7 @@ Topic:
 """)
         output = generate_textbook(topic)
     elif suggested_function == "E. generate_play":
-        play_name = ask(f"""
+        play_name = gpt(f"""
 The user has asked:
 
 {prompt}
@@ -96,7 +96,7 @@ Topic:
 """)
         output = generate_play(play_name)
     elif suggested_function == "F. solve_math_problem_UNSAFE":
-        problem = ask(f"""
+        problem = gpt(f"""
 The user has asked:
 
 {prompt}

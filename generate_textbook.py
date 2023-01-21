@@ -3,7 +3,7 @@
 This module contains functions to generate a textbook.
 """
 
-from helper_functions import ask
+from helper_functions import gpt
 
 def generate_textbook_outline(topic):
     """
@@ -19,7 +19,7 @@ def generate_textbook_outline(topic):
     str
         The outline of the textbook.
     """
-    output = ask(f"""
+    output = gpt(f"""
 Please list the 6-12 (absolute max of 12) chapters for a textbook on {topic}.
 These chapters are numbered 1., 2., 3., etc.
 
@@ -50,7 +50,7 @@ def generate_textbook_chapter_outline(topic, textbook_outline, section):
     str
         The outline of the chapter.
     """
-    output = ask(f"""
+    output = gpt(f"""
 We are writing a textbook on {topic}. The chapters are:
 
 {textbook_outline}
@@ -90,7 +90,7 @@ def generate_subsection(topic, textbook_outline, chapter, chapter_outline, subse
     str
         The content of the subsection.
     """
-    output = ask(f"""
+    output = gpt(f"""
 We are designing a course on {topic}. The overall textbook outline is:
 
 {textbook_outline}

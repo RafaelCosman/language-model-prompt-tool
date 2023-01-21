@@ -2,7 +2,7 @@
 This module contains functions to edit text.
 """
 
-from helper_functions import ask
+from helper_functions import gpt
 
 def edit(text):
     """
@@ -18,7 +18,7 @@ def edit(text):
     str
         The edited version of the input text.
     """
-    output = ask(f"""
+    output = gpt(f"""
 Please edit the following text to be as clear and concise as possible:
 
 {text}

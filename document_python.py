@@ -1,7 +1,7 @@
-from helper_functions import ask
+from helper_functions import gpt
 
 def document_python_file(python_code):
-    output = ask(f"""
+    output = gpt(f"""
 ================
 Example
 ================

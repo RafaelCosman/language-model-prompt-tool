@@ -1,4 +1,4 @@
-from helper_functions import ask
+from helper_functions import gpt
 
 with open('collected_docstrings.txt', 'r') as f:
     # Read the file into a string
@@ -19,7 +19,7 @@ def generate_python_code(problem):
         The generated python code for the input problem.
     """
 
-    output = ask(f"""
+    output = gpt(f"""
 For reference, here is the documentation for this entire repo. These functions may or may not be helpful for solving the problem below.
 
 {documentation}

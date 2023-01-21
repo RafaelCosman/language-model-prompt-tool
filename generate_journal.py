@@ -1,4 +1,4 @@
-from helper_functions import ask
+from helper_functions import gpt
 
 from edit import edit
 
@@ -16,7 +16,7 @@ def generate_article(topic):
     str
         The generated article.
     """
-    output = ask(f"""
+    output = gpt(f"""
 Please write an article about {topic}.
 
 Article:
@@ -46,7 +46,7 @@ def generate_journal(topic):
     str
         The generated journal.
     """
-    raw_topics_list = ask(f"""
+    raw_topics_list = gpt(f"""
 Please generate a list of topics for articles to be included in a journal on {topic}.
 
 Topics:

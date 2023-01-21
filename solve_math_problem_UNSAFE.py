@@ -1,4 +1,4 @@
-from helper_functions import ask
+from helper_functions import gpt
 from generate_python_code import generate_python_code
 
 def solve_math_problem_UNSAFE(problem):
